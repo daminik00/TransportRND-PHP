@@ -26,8 +26,11 @@
   }
   $preFinalArray = array();
   for ($i = 0; $i < count($array1); $i++) {
-      $preFinalArray[] = split(';', $array1[$i]);
-      print_r($preFinalArray[$i]);
+    print_r(array_chunk($input_array, 2));
+      // $ab = array();
+      // $ba = array();
+      // $preFinalArray[] = split(';', $array1[$i]);
+      // print_r($preFinalArray[$i]);
       echo "<br /><br />";
   }
 ?>
