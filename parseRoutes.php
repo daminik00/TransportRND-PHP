@@ -83,9 +83,13 @@
           )
         )
       );
-      $preFinalArray[] = $info;
-      echo "<pre>";
-      print_r($preFinalArray[$i]);
-      echo "</pre><br /><br />";
+      // $preFinalArray[] = $info;
+      // echo "<pre>";
+      // print_r($preFinalArray[$i]);
+      // echo "</pre><br /><br />";
   }
+
+  echo "<pre>";
+  print_r(json_encode($preFinalArray));
+  echo "</pre>";
 ?>
