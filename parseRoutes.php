@@ -18,7 +18,7 @@
 
   $array = array();
 
-  for ($i = 0; $i < count($array1); $i++) {
+  for ($i = 1; $i < count($array1); $i++) {
     $array[] = $array1[$i];
   }
 
