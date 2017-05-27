@@ -37,7 +37,7 @@
   for ($i = 0; $i < count($array1); $i++) {
       // echo count(split(';', $array1[$i]));
       $localArray = split(';', $array1[$i]);
-      if ($localArray[0] != "" || $localArray[0] != " ") $RouteNum = $localArray[0];
+      if ($localArray[0] != "" || $localArray[0] != " ") echo "LOX";;
       if ($localArray[1] != "" || $localArray[1] != " ") $Authority = $localArray[1];
       if ($localArray[2] != "" || $localArray[2] != " ") $City = $localArray[2];
       if ($localArray[3] != "" || $localArray[3] != " ") $Transport = $localArray[3];
