@@ -37,15 +37,14 @@
   for ($i = 0; $i < count($array1); $i++) {
       // echo count(split(';', $array1[$i]));
       $localArray = split(';', $array1[$i]);
-      if ($localArray[0] != "" || $localArray[0] != " ") $RouteNum = $localArray[0];
-      if ($localArray[1] != "" || $localArray[1] != " ") $Authority = $localArray[1];
-      if ($localArray[2] != "" || $localArray[2] != " ") $City = $localArray[2];
-      if ($localArray[3] != "" || $localArray[3] != " ") $Transport = $localArray[3];
-      if ($localArray[4] != "" || $localArray[4] != " ") $Operator = $localArray[4];
-      if ($localArray[5] != "" || $localArray[5] != " ") $ValidityPeriods = $localArray[5];
-      if ($localArray[6] != "" || $localArray[6] != " ") $SpecialDates = $localArray[6];
-      if ($localArray[7] != "" || $localArray[7] != " ") $RouteTag = $localArray[7];
-      echo $RouteNum.$Authority.$City.$Transport;
+      if ($localArray[0] == "" || $localArray[0] == " ") $RouteNum = $localArray[0];
+      if ($localArray[1] == "" || $localArray[1] == " ") $Authority = $localArray[1];
+      if ($localArray[2] == "" || $localArray[2] == " ") $City = $localArray[2];
+      if ($localArray[3] == "" || $localArray[3] == " ") $Transport = $localArray[3];
+      if ($localArray[4] == "" || $localArray[4] == " ") $Operator = $localArray[4];
+      if ($localArray[5] == "" || $localArray[5] == " ") $ValidityPeriods = $localArray[5];
+      if ($localArray[6] == "" || $localArray[6] == " ") $SpecialDates = $localArray[6];
+      if ($localArray[7] == "" || $localArray[7] == " ") $RouteTag = $localArray[7];
       if ($i == 0) {
         $RouteNum = $localArray[0];
         $Authority = $localArray[1];
