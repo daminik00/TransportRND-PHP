@@ -57,7 +57,8 @@
         )
       );
       $preFinalArray[] = $info;
+      echo "<pre>";
       print_r($preFinalArray[$i]);
-      echo "<br /><br />";
+      echo "</pre><br /><br />";
   }
 ?>
