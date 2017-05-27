@@ -8,7 +8,7 @@
 if ($handle) {
     while (($line = fgets($handle)) !== false) {
         // process the line read.
-        echo $line;
+        echo $line."<br><br>";
     }
 
     fclose($handle);
