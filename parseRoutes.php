@@ -26,7 +26,7 @@
   }
   $preFinalArray = array();
   for ($i = 0; $i < count($array1); $i++) {
-      $preFinalArray[] = preg_split(";", $array1[$i]);
+      $preFinalArray[] = split(';', $array1[$i]);
   }
 
   print_r($preFinalArray);
