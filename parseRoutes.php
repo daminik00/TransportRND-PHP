@@ -45,6 +45,17 @@
       if ($localArray[5] != "" || $localArray[5] != " ") $ValidityPeriods = $localArray[5];
       if ($localArray[6] != "" || $localArray[6] != " ") $SpecialDates = $localArray[6];
       if ($localArray[7] != "" || $localArray[7] != " ") $RouteTag = $localArray[7];
+
+      if ($i == 0) {
+        $RouteNum = $localArray[0];
+        $Authority = $localArray[1];
+        $City = $localArray[2];
+        $Transport = $localArray[3];
+        $Operator = $localArray[4];
+        $ValidityPeriods = $localArray[5];
+        $SpecialDates = $localArray[6];
+        $RouteTag = $localArray[7];
+      }
       $info = array(
         "RouteNum" => $RouteNum,
         "Authority" => $Authority,
