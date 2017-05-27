@@ -17,17 +17,13 @@
   }
 
   $array = array();
-
-  for ($i = 2; $i < count($array1); $i++) {
+  for ($i = 1; $i < count($array1); $i++) {
     $array[] = $array1[$i];
   }
-
-  print_r($array[0]);
-  echo "<br /><br />";
-  $array = array();
-  for ($i = 0; $i < count($array1); $i+=2) {
-    $array[] = "".$array1[$i]."".$array1[$i+1];
+  $array1 = array();
+  for ($i = 0; $i < count($array); $i+=2) {
+    $array1[] = "".$array[$i]."".$array[$i+1];
   }
-  print_r($array);
+  print_r($array1);
 
 ?>
