@@ -27,9 +27,36 @@
   $preFinalArray = array();
   for ($i = 0; $i < count($array1); $i++) {
       // echo count(split(';', $array1[$i]));
-      $ab = array();
-      $ba = array();
-      $preFinalArray[] = split(';', $array1[$i]);
+      $localArray = split(';', $array1[$i]);
+      $info = array(
+        "RouteNum" => $localArray[0],
+        "Authority" => $localArray[1],
+        "City" => $localArray[2],
+        "Transport" => $localArray[3],
+        "Operator" => $localArray[4],
+        "ValidityPeriods" => $localArray[5],
+        "SpecialDates" => $localArray[6],
+        "SpecialDates" => $localArray[7],
+        "RouteTypes" => array(
+          "ab" => array( // 8
+            "Commercial" => $localArray[9],
+            "RouteName" => $localArray[10],
+            "Weekdays" => $localArray[11],
+            "Streets" => $localArray[12],
+            "RouteStops" => $localArray[13],
+            "RouteStopsPlatforms" => $localArray[14],
+          ),
+          "ba" => array( // 22
+            "Commercial" => $localArray[23],
+            "RouteName" => $localArray[24],
+            "Weekdays" => $localArray[25],
+            "Streets" => $localArray[26],
+            "RouteStops" => $localArray[27],
+            "RouteStopsPlatforms" => $localArray[28],
+          )
+        )
+      );
+      $preFinalArray[] = $info;
       print_r($preFinalArray[$i]);
       echo "<br /><br />";
   }
