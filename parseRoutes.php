@@ -15,5 +15,6 @@
   for ($i = 0; $i < count($array); $i+=2) {
     $array1[] = "".$array[$i]."".$array[$i+1];
   }
+  unset($array1[0]);
   print_r($array1);
 ?>
