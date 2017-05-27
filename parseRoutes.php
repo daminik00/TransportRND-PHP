@@ -5,14 +5,15 @@
   // echo $txt;
 
   $handle = fopen($url, "r");
-if ($handle) {
-    while (($line = fgets($handle)) !== false) {
-        // process the line read.
-        echo $line."<br><br>";
-    }
+  $array = array();
+  while (($line = fgets($handle)) !== false) {
+    $array[] = $line;
+  }
+  fclose($handle);
 
-    fclose($handle);
-} else {
-    // error opening the file.
-}
+  $array1 = array();
+  for ($i = 0; $i < count($array); $i+=2) {
+    $array1[] = "".$array[$i]."".$array[$i+1];
+  }
+  print_r($array1);
 ?>
