@@ -90,6 +90,6 @@
   }
 
   echo "<pre>";
-  print_r(json_encode($preFinalArray));
+  print_r(json_encode($preFinalArray[1]));
   echo "</pre>";
 ?>
