@@ -16,7 +16,7 @@
     $array1[] = "".$array[$i]."".$array[$i+1];
   }
   unset($array1[0]);
-  print_r($array1);
+  print_r($array1[0]);
   echo "<br /><br />";
   $array = array();
   for ($i = 0; $i < count($array1); $i+=2) {
