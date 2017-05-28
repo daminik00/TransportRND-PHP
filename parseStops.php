@@ -1,5 +1,5 @@
 <?php
-
+  header("Content-Type: text/html; charset=utf-8");
   $url = "https://www.its-rnd.ru/pikasonline/rostov/stops.txt";
   $txt = file_get_contents($url);
 
