@@ -12,7 +12,7 @@
 
   $array1 = array();
   for ($i = 1; $i < count($array); $i++) {
-    $array1[] = $array[$i];
+    $array1[] = split(';', $array[$i]);
   }
   print_r($array1);
 ?>
