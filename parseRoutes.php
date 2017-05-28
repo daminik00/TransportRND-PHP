@@ -120,7 +120,7 @@
           )
     ");
 
-    $mysql->query ("
+    $mysqli->query ("
       INSERT INTO `ab` (
           `id`,
           `Commercial`,
@@ -140,7 +140,7 @@
           )
     ");
 
-    $mysql->query ("
+    $mysqli->query ("
       INSERT INTO `ba` (
           `id`,
           `Commercial`,
