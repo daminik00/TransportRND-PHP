@@ -11,7 +11,7 @@
   fclose($handle);
 
   $array1 = array();
-  for ($i = 1; $i < count($array); $i++) {
+  for ($i = 0; $i < count($array); $i++) {
     $array1[] = split(';', $array[$i]);
   }
   print_r($array1);
