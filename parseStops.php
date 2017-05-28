@@ -6,8 +6,13 @@
   $handle = fopen($url, "r");
   $array = array();
   while (($line = fgets($handle)) !== false) {
-    echo $line."<br /><br />";
     $array[] = $line;
   }
   fclose($handle);
+
+  $array1 = array();
+  for ($i = 1; $i < count($array); $i++) {
+    $array1[] = $array[$i];
+  }
+  print_r($array1);
 ?>
