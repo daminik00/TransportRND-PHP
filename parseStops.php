@@ -29,7 +29,7 @@
 
   $mysqli->query ("SET NAMES 'utf8'");
 // for ($i = 0; $i < count($array1); $i++) {
-  for ($i = 0; $i < 100; $i++) {
+  for ($i = 100; $i < 500; $i++) {
     $handle = fopen($array1[$i]['id'].'.png', "w");
     fwrite($handle, file_get_contents("https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=".$array1[$i]['id']));
     fclose($handle);
