@@ -163,6 +163,6 @@
 
 
   echo "<pre>";
-  print_r(json_encode($preFinalArray));
+  echo json_encode($preFinalArray);
   echo "</pre>";
 ?>
