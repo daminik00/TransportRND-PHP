@@ -22,7 +22,31 @@
     );
   }
 
-  print_r($array1);
+  $mysqli = @new mysqli('mysql.daminik00.myjino.ru', 'daminik00', 'luabeo', 'daminik00_routes');
+      if (mysqli_connect_errno()) {
+        echo "Подключение невозможно: ".mysqli_connect_error();
+      }
+
+  $mysqli->query ("SET NAMES 'utf8'");
+
+  for ($i = 0; $i < count($array1); $i++) {
+    $mysqli->query ("
+      INSERT INTO `stops` (
+          `id`,
+          `Lat`,
+          `Lng`,
+          `Stops`,
+          `Name`
+        ) VALUES (
+            '{$array1[$i]['id']}',
+            '{$array1[$i]['Lat']}',
+            '{$array1[$i]['Lng']}',
+            '{$array1[$i]['Stops']}',
+            '{$array1[$i]['Name']}'
+          )
+      ");
+  }
+  // print_r($array1);
   // "Info" => $array2[5],
   // "Street" => $array2[6],
   // "Area" => $array2[7],
