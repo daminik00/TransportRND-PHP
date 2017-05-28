@@ -162,7 +162,7 @@
   }
 
 
-  // echo "<pre>";
-  // print_r(json_encode($preFinalArray));
-  // echo "</pre>";
+  echo "<pre>";
+  print_r(json_encode($preFinalArray));
+  echo "</pre>";
 ?>
