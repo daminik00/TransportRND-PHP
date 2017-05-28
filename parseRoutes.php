@@ -160,9 +160,4 @@
           )
     ");
   }
-
-
-  echo "<pre>";
-  print_r($preFinalArray);
-  echo "</pre>";
 ?>
