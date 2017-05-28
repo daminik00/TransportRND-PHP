@@ -12,17 +12,17 @@
 
   $array1 = array();
   for ($i = 0; $i < count($array); $i++) {
-    $array = split(';', $array[$i]);
+    $array2 = split(';', $array[$i]);
     $array1[] = array(
-      "id" => $array[0],
-      "Lat" => $array[1],
-      "Lng" => $array[2],
-      "Stops" => $array[3],
-      "Name" => $array[4],
-      "Info" => $array[5],
-      "Street" => $array[6],
-      "Area" => $array[7],
-      "City" => $array[8],
+      "id" => $array2[0],
+      "Lat" => $array2[1],
+      "Lng" => $array2[2],
+      "Stops" => $array2[3],
+      "Name" => $array2[4],
+      "Info" => $array2[5],
+      "Street" => $array2[6],
+      "Area" => $array2[7],
+      "City" => $array2[8],
     );
 
     print_r($array1[$i]);
