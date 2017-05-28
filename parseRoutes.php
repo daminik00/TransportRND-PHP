@@ -131,12 +131,12 @@
           `RouteStopsPlatforms`
         ) VALUES (
             '{$rand}',
-            '{$preFinalArray[$i]['RouteTypes']['ba']}',
-            '{$preFinalArray[$i]['RouteTypes']['ba']}',
-            '{$preFinalArray[$i]['RouteTypes']['ba']}',
-            '{$preFinalArray[$i]['RouteTypes']['ba']}',
-            '{$preFinalArray[$i]['RouteTypes']['ba']}',
-            '{$preFinalArray[$i]['RouteTypes']['ba']}'
+            '{$preFinalArray[$i]['RouteTypes']['ba']['Commercia']}',
+            '{$preFinalArray[$i]['RouteTypes']['ba']['RouteName']}',
+            '{$preFinalArray[$i]['RouteTypes']['ba']['Weekdays']}',
+            '{$preFinalArray[$i]['RouteTypes']['ba']['Streets']}',
+            '{$preFinalArray[$i]['RouteTypes']['ba']['RouteStops']}',
+            '{$preFinalArray[$i]['RouteTypes']['ba']['RouteStopsPlatforms']}'
           )
     ");
 
@@ -151,12 +151,12 @@
           `RouteStopsPlatforms`
         ) VALUES (
             '{$rand}',
-            '{$preFinalArray[$i]['RouteTypes']['ab']}',
-            '{$preFinalArray[$i]['RouteTypes']['ab']}',
-            '{$preFinalArray[$i]['RouteTypes']['ab']}',
-            '{$preFinalArray[$i]['RouteTypes']['ab']}',
-            '{$preFinalArray[$i]['RouteTypes']['ab']}',
-            '{$preFinalArray[$i]['RouteTypes']['ab']}'
+            '{$preFinalArray[$i]['RouteTypes']['ab']['Commercia']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']['RouteName']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']['Weekdays']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']['Streets']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']['RouteStops']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']['RouteStopsPlatforms']}'
           )
     ");
   }
