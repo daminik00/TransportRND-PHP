@@ -85,7 +85,7 @@
       $preFinalArray[] = $info;
   }
 
-  $mysqli = @new mysqli('mysql.daminik00.myjino.ru', 'daminik00', 'luabeo', 'daminik00_school');
+  $mysqli = @new mysqli('mysql.daminik00.myjino.ru', 'daminik00', 'luabeo', 'daminik00_routes');
   		if (mysqli_connect_errno()) {
   			echo "Подключение невозможно: ".mysqli_connect_error();
   		}
