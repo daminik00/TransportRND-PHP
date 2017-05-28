@@ -94,7 +94,6 @@
 
   for ($i = 0; $i < count($preFinalArray); $i++) {
     $rand = rand(0,9999).rand(0,9999);
-    echo $rand;
     $mysqli->query ("
       INSERT INTO `routes` (
           `RouteNum`,
@@ -116,8 +115,8 @@
             '{$preFinalArray[$i]['ValidityPeriods']}',
             '{$preFinalArray[$i]['SpecialDates']}',
             '{$preFinalArray[$i]['RouteTag']}',
-            '{$rand}',
-            '{$rand}'
+            '{$i}',
+            '{$i}'
           )
     ");
 
@@ -131,7 +130,7 @@
           `RouteStops`,
           `RouteStopsPlatforms`
         ) VALUES (
-            '{$rand}',
+            '{$i}',
             '{$preFinalArray[$i]['RouteTypes']['ba']['Commercia']}',
             '{$preFinalArray[$i]['RouteTypes']['ba']['RouteName']}',
             '{$preFinalArray[$i]['RouteTypes']['ba']['Weekdays']}',
@@ -151,7 +150,7 @@
           `RouteStops`,
           `RouteStopsPlatforms`
         ) VALUES (
-            '{$rand}',
+            '{$i}',
             '{$preFinalArray[$i]['RouteTypes']['ab']['Commercia']}',
             '{$preFinalArray[$i]['RouteTypes']['ab']['RouteName']}',
             '{$preFinalArray[$i]['RouteTypes']['ab']['Weekdays']}',
