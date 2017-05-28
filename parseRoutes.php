@@ -35,7 +35,6 @@
   $SpecialDates = "";
   $RouteTag = "";
   for ($i = 0; $i < count($array1); $i++) {
-      // echo count(split(';', $array1[$i]));
       $localArray = split(';', $array1[$i]);
       if ($localArray[0] == "" || $localArray[0] == " ") {} else $RouteNum = $localArray[0];
       if ($localArray[1] == "" || $localArray[1] == " ") {} else $Authority = $localArray[1];
@@ -84,10 +83,84 @@
         )
       );
       $preFinalArray[] = $info;
-      // echo "<pre>";
-      // print_r($preFinalArray[$i]);
-      // echo "</pre><br /><br />";
   }
+
+  $mysqli = @new mysqli('mysql.daminik00.myjino.ru', 'daminik00', 'luabeo', 'daminik00_school');
+  		if (mysqli_connect_errno()) {
+  			echo "Подключение невозможно: ".mysqli_connect_error();
+  		}
+
+  $mysqli->query ("SET NAMES 'utf8'");
+
+  for ($i = 0; $i < count($preFinalArray); $i++) {
+    $rand = rand(0,9999).rand(0,9999);
+    $mysqli->query ("
+      INSERT INTO `routes` (
+          `RouteNum`,
+          `Authority`,
+          `City`,
+          `Transport`,
+          `Operator`,
+          `ValidityPeriods`,
+          `SpecialDates`,
+          `RouteTag`,
+          `ab`,
+          `ba`
+        ) VALUES (
+            '{$preFinalArray[$i]['RouteNum']}',
+            '{$preFinalArray[$i]['Authority']}',
+            '{$preFinalArray[$i]['City']}',
+            '{$preFinalArray[$i]['Transport']}',
+            '{$preFinalArray[$i]['Operator']}',
+            '{$preFinalArray[$i]['ValidityPeriods']}',
+            '{$preFinalArray[$i]['SpecialDates']}',
+            '{$preFinalArray[$i]['RouteTag']}',
+            '{$rand}',
+            '{$rand}'
+          )
+    ");
+
+    $mysql->query ("
+      INSERT INTO `ab` (
+          `id`,
+          `Commercial`,
+          `RouteName`,
+          `Weekdays`,
+          `Streets`,
+          `RouteStops`,
+          `RouteStopsPlatforms`
+        ) VALUES (
+            '{$preFinalArray[$i]['RouteTypes']['ab']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']}'
+          )
+    ");
+
+    $mysql->query ("
+      INSERT INTO `ba` (
+          `id`,
+          `Commercial`,
+          `RouteName`,
+          `Weekdays`,
+          `Streets`,
+          `RouteStops`,
+          `RouteStopsPlatforms`
+        ) VALUES (
+            '{$preFinalArray[$i]['RouteTypes']['ba']}',
+            '{$preFinalArray[$i]['RouteTypes']['ba']}',
+            '{$preFinalArray[$i]['RouteTypes']['ba']}',
+            '{$preFinalArray[$i]['RouteTypes']['ba']}',
+            '{$preFinalArray[$i]['RouteTypes']['ba']}',
+            '{$preFinalArray[$i]['RouteTypes']['ba']}',
+            '{$preFinalArray[$i]['RouteTypes']['ba']}'
+          )
+    ");
+  }
+
 
   // echo "<pre>";
   // print_r(json_encode($preFinalArray));
