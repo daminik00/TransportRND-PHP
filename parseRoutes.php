@@ -121,26 +121,6 @@
     ");
 
     $mysqli->query ("
-      INSERT INTO `ab` (
-          `id`,
-          `Commercial`,
-          `RouteName`,
-          `Weekdays`,
-          `Streets`,
-          `RouteStops`,
-          `RouteStopsPlatforms`
-        ) VALUES (
-            '{$rand}',
-            '{$preFinalArray[$i]['RouteTypes']['ab']}',
-            '{$preFinalArray[$i]['RouteTypes']['ab']}',
-            '{$preFinalArray[$i]['RouteTypes']['ab']}',
-            '{$preFinalArray[$i]['RouteTypes']['ab']}',
-            '{$preFinalArray[$i]['RouteTypes']['ab']}',
-            '{$preFinalArray[$i]['RouteTypes']['ab']}'
-          )
-    ");
-
-    $mysqli->query ("
       INSERT INTO `ba` (
           `id`,
           `Commercial`,
@@ -157,6 +137,26 @@
             '{$preFinalArray[$i]['RouteTypes']['ba']}',
             '{$preFinalArray[$i]['RouteTypes']['ba']}',
             '{$preFinalArray[$i]['RouteTypes']['ba']}'
+          )
+    ");
+
+    $mysqli->query ("
+      INSERT INTO `ab` (
+          `id`,
+          `Commercial`,
+          `RouteName`,
+          `Weekdays`,
+          `Streets`,
+          `RouteStops`,
+          `RouteStopsPlatforms`
+        ) VALUES (
+            '{$rand}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']}',
+            '{$preFinalArray[$i]['RouteTypes']['ab']}'
           )
     ");
   }
