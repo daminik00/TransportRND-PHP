@@ -123,7 +123,7 @@
     $mysqli->query ("
       INSERT INTO `ba` (
           `id`,
-          `Commercial`,
+          `Commercia`,
           `RouteName`,
           `Weekdays`,
           `Streets`,
