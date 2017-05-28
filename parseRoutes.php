@@ -130,7 +130,7 @@
           `RouteStops`,
           `RouteStopsPlatforms`
         ) VALUES (
-            '{$preFinalArray[$i]['RouteTypes']['ab']}',
+            '{$rand}',
             '{$preFinalArray[$i]['RouteTypes']['ab']}',
             '{$preFinalArray[$i]['RouteTypes']['ab']}',
             '{$preFinalArray[$i]['RouteTypes']['ab']}',
@@ -150,7 +150,7 @@
           `RouteStops`,
           `RouteStopsPlatforms`
         ) VALUES (
-            '{$preFinalArray[$i]['RouteTypes']['ba']}',
+            '{$rand}',
             '{$preFinalArray[$i]['RouteTypes']['ba']}',
             '{$preFinalArray[$i]['RouteTypes']['ba']}',
             '{$preFinalArray[$i]['RouteTypes']['ba']}',
