@@ -19,13 +19,12 @@
       "Lng" => $array2[2],
       "Stops" => $array2[3],
       "Name" => $array2[4],
-      "Info" => $array2[5],
-      "Street" => $array2[6],
-      "Area" => $array2[7],
-      "City" => $array2[8],
     );
-
-    print_r($array1[$i]);
-    echo "<br /><br />";
   }
+
+  print_r($array1);
+  // "Info" => $array2[5],
+  // "Street" => $array2[6],
+  // "Area" => $array2[7],
+  // "City" => $array2[8],
 ?>
