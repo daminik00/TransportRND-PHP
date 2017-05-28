@@ -94,6 +94,7 @@
 
   for ($i = 0; $i < count($preFinalArray); $i++) {
     $rand = rand(0,9999).rand(0,9999);
+    echo $rand;
     $mysqli->query ("
       INSERT INTO `routes` (
           `RouteNum`,
