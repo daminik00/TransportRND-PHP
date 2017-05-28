@@ -46,7 +46,7 @@
           )
       ");
   }
-  // print_r($array1);
+  print_r($array1);
   // "Info" => $array2[5],
   // "Street" => $array2[6],
   // "Area" => $array2[7],
