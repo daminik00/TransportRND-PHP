@@ -30,22 +30,24 @@
   $mysqli->query ("SET NAMES 'utf8'");
 
   for ($i = 0; $i < count($array1); $i++) {
-    echo file_get_contents('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='.$array1[$i]['id']);
-    // $mysqli->query ("
-    //   INSERT INTO `stops` (
-    //       `id`,
-    //       `Lat`,
-    //       `Lng`,
-    //       `Stops`,
-    //       `Name`
-    //     ) VALUES (
-    //         '{$array1[$i]['id']}',
-    //         '{$array1[$i]['Lat']}',
-    //         '{$array1[$i]['Lng']}',
-    //         '{$array1[$i]['Stops']}',
-    //         '{$array1[$i]['Name']}'
-    //       )
-    //   ");
+    $qr = file_get_contents('https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='.$array1[$i]['id']);
+    $mysqli->query ("
+      INSERT INTO `stops` (
+          `id`,
+          `Lat`,
+          `Lng`,
+          `Stops`,
+          `Name`,
+          `qr`
+        ) VALUES (
+            '{$array1[$i]['id']}',
+            '{$array1[$i]['Lat']}',
+            '{$array1[$i]['Lng']}',
+            '{$array1[$i]['Stops']}',
+            '{$array1[$i]['Name']}',
+            '$qr'
+          )
+      ");
   }
   // print_r($array1);
   // "Info" => $array2[5],
