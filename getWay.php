@@ -51,7 +51,7 @@
   for ($i = 1; $i < count($arrayStops); $i++) {
     $path .= "|".$arrayStops[$i]['googleMaps'];
   }
-  $url = "https://roads.googleapis.com/v1/snapToRoads?path=".$path."&interpolate=true&key=AIzaSyAW3kP-9G3kMq2_3vxMVTJKaNPuEfTDgcQ"
+  $url = "https://roads.googleapis.com/v1/snapToRoads?path=".$path."&interpolate=true&key=AIzaSyAW3kP-9G3kMq2_3vxMVTJKaNPuEfTDgcQ";
 
   echo "<pre>";
     print_r($url);
