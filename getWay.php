@@ -46,8 +46,15 @@
       $arrayStops[] = array("lat" => $lat, "lng" => $lng, "googleMaps" => "".$lat." ".$lng);
     }
   }
+  $path = $arrayStops[0]['googleMaps'];
+
+  for ($i = 1; $i < count($arrayStops); $i++) {
+    $path .= "|".$arrayStops[$i]['googleMaps'];
+  }
+  $url = "https://roads.googleapis.com/v1/snapToRoads?path=".$path."&interpolate=true&key=AIzaSyAW3kP-9G3kMq2_3vxMVTJKaNPuEfTDgcQ"
+
   echo "<pre>";
-    print_r($arrayStops);
+    print_r($url);
   echo "</pre>";
 
 ?>
