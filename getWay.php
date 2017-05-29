@@ -2,6 +2,17 @@
   $arrayStops = array();
   $arrayStopsId = array();
 
+  public function cordDecoder($c) {
+    $str = "";
+    for ($i = 0; $i < strlen($c); $i++) {
+      $str .= $c[$i];
+      if ($i == 1) {
+        $str .= ".";
+      }
+    }
+    return $str;
+  }
+
   $mysqli = @new mysqli('mysql.daminik00.myjino.ru', 'daminik00', 'luabeo', 'daminik00_routes');
       if (mysqli_connect_errno()) {
         echo "Подключение невозможно: ".mysqli_connect_error();
@@ -30,7 +41,9 @@
 
   while (($row = $result_set->fetch_assoc()) != false) {
     if (in_array($row['id'], $arrayStopsId)) {
-      $arrayStops[] = array("lat" => $row['Lat'], "lng" => $row['Lng']);
+      $lat = cordDecoder($row['Lat']);
+      $lng = cordDecoder($row['Lng']);
+      $arrayStops[] = array("lat" => $lat, "lng" => $lng);
     }
   }
 
