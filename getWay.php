@@ -2,7 +2,7 @@
   $arrayStops = array();
   $arrayStopsId = array();
 
-  public function cordDecoder($c) {
+  function cordDecoder($c) {
     $str = "";
     for ($i = 0; $i < strlen($c); $i++) {
       $str .= $c[$i];
