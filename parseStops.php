@@ -32,9 +32,24 @@
 
     print_r($array1[$i]);
     echo "<br /><br />";
+    echo "
+      INSERT INTO `stops` (
+          `id`,
+          `Lat`,
+          `Lng`,
+          `Stops`,
+          `Name`
+        ) VALUES (
+            '{$array1[$i]['id']}',
+            '{$array1[$i]['Lat']}',
+            '{$array1[$i]['Lng']}',
+            '{$array1[$i]['Stops']}',
+            '{$array1[$i]['Name']}',
+          )
+      ";
     $mysqli->query ("
       INSERT INTO `stops` (
-          `id`, 
+          `id`,
           `Lat`,
           `Lng`,
           `Stops`,
