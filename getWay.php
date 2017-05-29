@@ -46,8 +46,8 @@
       $arrayStops[] = array("lat" => $lat, "lng" => $lng);
     }
   }
-
-  print_r($arrayStops);
-
+  echo "<pre>";
+    print_r($arrayStops);
+  echo "</pre>";
 
 ?>
