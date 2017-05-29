@@ -34,11 +34,11 @@
     echo "<br /><br />";
     $mysqli->query ("
       INSERT INTO `stops` (
-          `id`,
+          `id`, 
           `Lat`,
           `Lng`,
           `Stops`,
-          `Name`,
+          `Name`
         ) VALUES (
             '{$array1[$i]['id']}',
             '{$array1[$i]['Lat']}',
