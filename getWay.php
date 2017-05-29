@@ -43,7 +43,7 @@
     if (in_array($row['id'], $arrayStopsId)) {
       $lat = cordDecoder($row['Lat']);
       $lng = cordDecoder($row['Lng']);
-      $arrayStops[] = array("lat" => $lat, "lng" => $lng);
+      $arrayStops[] = array("lat" => $lat, "lng" => $lng, "googleMaps" => "".$lat." ".$lng);
     }
   }
   echo "<pre>";
