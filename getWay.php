@@ -24,15 +24,17 @@
     $arrayStopsId = split(',', $row["RouteStops"]);
 	}
 
-  print_r($arrayStopsId);
+  // print_r($arrayStopsId);
 
   $result_set = $mysqli->query ("SELECT * FROM `stops`");
 
   while (($row = $result_set->fetch_assoc()) != false) {
-    if (in_array($row[''])) {
-
+    if (in_array($row['id'], $arrayStopsId)) {
+      $arrayStops[] = array("lat" => $row['Lat'], "lng" => $row['Lng']);
     }
   }
+
+  print_r($arrayStops);
 
 
 ?>
