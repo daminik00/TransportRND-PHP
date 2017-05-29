@@ -29,6 +29,9 @@
 
   $mysqli->query ("SET NAMES 'utf8'");
   for ($i = 0; $i < count($array1); $i++) {
+
+    print_r($array1[$i]);
+    echo "<br /><br />";
     $mysqli->query ("
       INSERT INTO `stops` (
           `id`,
